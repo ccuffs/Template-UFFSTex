@@ -1,0 +1,268 @@
+%----------------------------------------------------------------------------------
+% Exemplo do uso da classe tcc.cls. Veja o arquivo .cls
+% para mais detalhes e instruções.
+%----------------------------------------------------------------------------------
+\chapter{Introdução}
+\label{chap:intro}
+% Comando para inserir siglas. As siglas devem aparecer em ordem ALFABÉTICA nas listas
+% correspondentes. Como a classe no momento não é capaz de ordenar
+% as entradas automaticamente, existem duas alternativas:
+%
+%    a- Insira todas as siglas no começo do texto,
+%    manualmente e em ordem alfabética.
+%
+%    b- Caso esteja em um ambiente UNIX (Linux, Mac ou Cygwin/similares),
+%    utilize o script sort.sh e o makefile que acompanham a
+%    classe. O makefile automaticamente compila a monografia para
+%    PDF (mas assume que o latex está acessível pela linha de
+%    comando). Neste caso a ordenação é feita de forma automática.
+%
+\sigla{abc}{Associação Brasileira de Computadores}
+\sigla{xyz}{lorem ipsum dolor sit}
+\sigla{ijk}{lorem ipsum dolor sit}
+%
+%
+% Comando para inserir símbolos. Estes irão aparecer em ordem
+% de ocorrência, já que o número da página está presente na lista
+% de símbolos.
+\simbolo{Hz}{Hertz}
+\simbolo{$\pi$}{Constante com valor aproximado de $3.1415926$}%
+%
+Sugestão de organização para o TCC I:
+
+\begin{itemize}
+\item Capítulo 1:
+	\begin{itemize}
+          \item Introdução/Contextualização 
+	   \item Problema
+	   \item Objetivo Geral
+	   \item Objetivos específicos
+	   \item Justificativa
+        \end{itemize}
+\item Capítulo 2: 
+	\begin{itemize}
+            \item Fundamentação teórica e conceitos
+	    \item Trabalhos relacionados
+        \end{itemize}
+\item Capítulo 3:
+	\begin{itemize}	
+            \item Metodologia
+	    \item Cronograma 
+	\end{itemize}
+\end{itemize}
+
+Lorem ipsum dolor sit amet Capítulo~\ref{chap:intro} consetetur
+sadipscing \alert{elitr sed} diam nonumy eirmod tempor invidunt ut labore
+et dolore  \highlight{magna aliquyam} erat sed diam voluptua at vero eos et
+accusam et \remove{justo duo} dolores et ea rebum \todo[size=\tiny]{comentário lateral no texto}
+no sea replace{takimata sanctus est}{lorem ipsum dolor} sit amet lorem ipsum
+dolor sit amet consetetur sadipscing \comment{elitr sed diam}{Este é um comentário sobre o texto grifado} nonumy eirmod.
+Ver Figura~\ref{fig:fig1}.
+
+% Um exemplo de figura
+\begin{figure}[htb!]
+\centering\includegraphics[width=.65\textwidth]{figuras/exemplo.eps}
+\caption%[This figure has a shorter caption now]%
+        {\label{fig:fig1}This is a figure with a very long
+    caption which looks ugly in the corresponding list of figures.
+    Fortunately, there is an optional parameter for a shorter
+    replacement of this monstrosity}%
+\end{figure}
+
+tempor invidunt~\cite{SKIENAC698} ut labore et dolore magna
+aliquyam erat sed diam voluptua at vero eos et accusam et justo
+duo dolores \citeonline{NAGAPACKING07}, \citeyear{CORMEMALGORITHMS01},\cite{GOLDENBERGAPL02}.
+
+Et ea rebum stet clita kasd gubergren no sea takimata
+sanctus est lorem ipsum dolor sit amet lorem
+ipsum~\cite{NAGAPACKING07, BENTLEYBC07}. O Algoritmo~\ref{alg:alg1}
+mostra este processo.
+
+\begin{algorithm}[htb]
+\begin{center}
+    % Um exemplo de algoritmo utilizando a pacote 'algorithmic'
+    %\algsetup{linenosize=\small,linenodelimiter=.}
+    \begin{algorithmic}[1]
+        \STATE \textbf{function} $\sigma\left(i,j\right)$
+        \STATE \COMMENT{\texttt{table} lorem ipsum dolor consetetur sadipscing elitr sed $\left(i,j\right)$}
+        \IF{$\text{table}\left[i,j\right].\text{memoized}$}
+            \RETURN $\text{table}\left[i,j\right].\text{error}$
+        \ENDIF
+        \STATE $\text{minerror}\leftarrow\infty$
+        \STATE $\text{bestt}\leftarrow{}\text{nil}$
+        \FOR { each template $t$ in $T$ }
+            \STATE $\text{error}\leftarrow{}\text{allocate}\left(t,i,j\right)$
+            \IF{$\text{error}<\text{minerror}$}
+                \STATE $\text{minerror}\leftarrow{}\text{error}$
+                \STATE $\text{bestt}\leftarrow{}t$
+            \ENDIF
+        \ENDFOR
+        \STATE $\text{table}\left[i,j\right].\text{memoized}\leftarrow{}\text{true}$
+        \STATE $\text{table}\left[i,j\right].\text{template}\leftarrow{}\text{bestt}$
+        \STATE $\text{table}\left[i,j\right].\text{error}\leftarrow{}\text{minerror}$
+        \RETURN $\text{minerror}$
+    \end{algorithmic}
+\end{center}
+\caption[An algorithm with an optional, shorter caption]%
+    {\label{alg:alg1}This is an algorithm with a very long
+    caption. However, we replaced it with a shorter version
+    in the Outline for legibility reasons}%
+\end{algorithm}
+
+tempor invidunt ut labore et dolore magna aliquyam erat sed diam
+voluptua at vero eos et accusam et justo duo dolores et ea
+rebum~\cite{CORMEMALGORITHMS01}.
+
+dolor sit~\cite{BENTLEYBC07} amet consetetur sadipscing elitr sed
+diam nonumy eirmod tempor invidunt ut labore et dolore magna
+aliquyam erat sed diam voluptua at vero~\cite{BRIANPL04}.
+
+\begin{enumerate}
+   \item lorem
+   \item ipsum
+   \item dolor
+   \item sit
+   \item amet
+   \item consetetur
+\end{enumerate}
+
+\section{\label{sec:secao1}Primeira seção}
+
+lorem ipsum dolor sit $x\leq 2$  amet consetetur sadipscing elitr
+sed diam nonumy eirmod Seção~\ref{sec:secao1} tempor invidunt ut
+labore et dolore magna aliquyam erat sed diam voluptua at vero eos
+et accusam et justo duo dolores et ea rebum stet
+clita.~\cite{OLIVEIRAAPL08}
+
+% Um exemplo de fórmula
+\begin{equation}\label{eq:eq1}
+    \intop_{0}^{\infty}{x^2 + \frac{\pi}{\sum_{i=0}^{n}{\frac{1}{i^2}}}}
+\end{equation}
+
+kasd gubergren no sea Equação~\eqref{eq:eq1} takimata sanctus est
+lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetetur
+sadipscing elitr sed diam nonumy eirmod.~\cite{PICCOLIAPL11, OLIVEIRAAPL08}
+
+
+Outro algoritmo (\Cref{alg:alg2}), agora com o pacote Algorithm2e:
+
+
+\begin{algorithm}[H]
+  \LinesNumbered
+  \Entrada{o proprio texto}
+  \Saida{como escrever algoritmos com \LaTeX2e }
+  \Inicio{
+    Inicialização\;
+    
+    \Repeat{fim do texto}{
+       leia o atual\;
+    
+       \uIf{entendeu}{
+          vá para o próximo\;
+        
+          próximo se torna o atual\;}
+       \Else{volte ao início da seção\;}
+    }
+  }
+  \caption{Como escrever algoritmos no \LaTeX2e}
+  \label{alg:alg2}
+\end{algorithm}
+
+
+
+amet lorem ipsum dolor sit amet consetetur sadipscing elitr sed
+diam nonumy eirmod.~\cite{PICCOLIDM08}
+
+\subsection{Subseção}
+
+dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat sed diam
+voluptua at vero. \citeauthor{BRIANPL04} 
+
+lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+erat sed diam voluptua at vero eos et accusam et justo duo dolores
+et ea rebum stet clita kasd gubergren no sea takimata sanctus est
+lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetetur
+sadipscing elitr sed diam nonumy eirmod.
+
+tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at
+vero eos et accusam et justo duo dolores et ea rebum stet clita kasd
+gubergren no sea takimata sanctus est lorem ipsum dolor sit amet lorem ipsum
+dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat sed diam voluptua
+at vero:
+
+\begin{itemize}
+   \item lorem
+   \item ipsum
+   \item dolor
+   \item sit
+   \item amet
+   \item consetetur
+\end{itemize}
+
+\subsubsection{Subsubsub}
+
+lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam
+voluptua at vero eos et accusam et justo duo dolores et ea rebum
+stet clita.~\cite{GOLDENBERGAPL02}
+
+\begin{equation}\label{eq:apl}%
+    L\left(i,j,w,h\right)=
+    \begin{cases}
+      E\left(i,w,h\right) & i=j\\
+      \min\left(\min_{k=i}^{j-1}\left\{\heartsuit\left(i,k,j,w,h\right)\right\},
+                \min_{k=i}^{j-1}\left\{\spadesuit\left(i,k,j,w,h\right)\right\}\right) & i<j\text{.}
+    \end{cases}
+\end{equation}
+
+lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam
+voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita
+kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet lorem
+ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at
+vero eos et accusam et justo duo dolores et ea rebum stet clita kasd
+gubergren no sea takimata sanctus est lorem ipsum dolor sit amet lorem ipsum
+dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero
+eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no
+sea takimata sanctus est lorem ipsum dolor sit amet.
+
+%----------------------------------------------------------------------------------
+% Exemplo do ambiente para citações diretas com mais de 3 linhas.
+%
+% Para citações diretas de até 3 linhas, faça assim:
+% De acordo com Direto~(2011, p.~21): "bla bla bla, bla 'bla'."
+De acordo com Esquedo~(2011, p.~19): 
+
+\begin{directcite}
+ut wisi enim ad minim veniam quis nostrud exerci tation ullamcorper suscipit
+lobortis nisl ut aliquip ex ea commodo consequat duis autem vel eum iriure
+dolor in hendrerit in vulputate velit esse molestie consequat vel illum
+dolore eu feugiat nulla facilisis at vero eros et accumsan et
+iusto odio
+\end{directcite}
+
+duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros
+et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+delenit augue duis dolore te feugait nulla facilisi lorem ipsum dolor sit
+amet consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut
+laoreet dolore magna aliquam erat volutpat.
+
+ut wisi enim ad minim veniam quis nostrud exerci tation ullamcorper suscipit
+lobortis nisl ut aliquip ex ea commodo consequat duis autem vel eum iriure
+dolor in hendrerit in vulputate velit esse molestie consequat vel illum
+dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
+feugait nulla facilisi.
+
+nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet
+doming id quod mazim placerat facer possim assum lorem ipsum dolor sit amet
+consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut
+laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+commodo consequat.
