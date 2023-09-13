@@ -286,8 +286,7 @@
     \newcommand*{\PP@orientadorname}{Orientador}
     \newcommand*{\PP@orientadornameabrev}{orient.}    
     \newcommand*{\PP@descricao}{%
-        \PP@tipo{} apresentad\ifx\PP@tipo\tese a\else o\fi{} como requisito parcial \`{a}
-        obten\c{c}\~{a}o do grau de \PP@grau\ em \PP@curso{} na \PP@Uni{}.%
+        \PP@tipo{} apresentad\ifx\PP@tipo\tese a\else o\fi{} ao Curso de \PP@curso{} da \PP@Uni{} (UFFS), como requisito para obten\c{c}\~{a}o do título de \PP@grau\ em \PP@curso{}.%
     }
     \newcommand*{\PP@fichaname}{Substitua esta p\'{a}gina pela Ficha Catalogr\'{a}fica}
     \newcommand*{\PP@fichanome}{}
@@ -515,8 +514,8 @@
         %----------------------------------------------------------------------------------
         % Retângulo central (título + autor)
         %----------------------------------------------------------------------------------
-        \hbox{\kern5cm\vbox to 7.7cm{%
-            \hsize=11.5cm
+        \hbox{\kern2cm\vbox to 7.7cm{%
+            \hsize=17.5cm
             \parskip6ex
             \parindent0pt
             \leftskip0pt plus1fil
@@ -603,8 +602,8 @@
         %----------------------------------------------------------------------------------
         % Retângulo central (título + autor)
         %----------------------------------------------------------------------------------
-        \hbox{\kern5cm\vbox to 8.7cm{%
-            \hsize=11.5cm
+        \hbox{\kern2cm\vbox to 8.7cm{%
+            \hsize=17.5cm
             \parskip6ex
             \parindent0pt
             \leftskip0pt plus1fil
@@ -630,7 +629,7 @@
         % Descrição da monografia ("Tese apresentada como requisito...")
         %----------------------------------------------------------------------------------
         \hbox{}\hfill\vbox{%
-            \hsize=23cm
+            \hsize=28cm
             \parfillskip0pt plus1fil
             \divide\hsize by3\relax
             \leftskip0pt
@@ -932,19 +931,19 @@
       % \vskip 19.5ex
       %}%
       {%
-      \null\vskip 5cm
+      \null %\vskip 5cm
        \parindent\z@
        \centering
        \normalfont
-       \interlinepenalty\@M
-       
+       \interlinepenalty\@M       
        \bfseries\texorpdfstring{\MakeUppercase{#1}}{}\par\nointerlineskip\nobreak
        \normalfont\normalsize
-       \vskip 19.5ex
+       \vskip 2cm
+       \hspace{-7pt}
       }%
       \@afterheading
    }%
-   {\null\vskip 2cm
+   {\null\vskip 1cm
    \begin{description}%
      \item[\PP@kwname{}:] \PP@kwtext{}.%
    \end{description}%
