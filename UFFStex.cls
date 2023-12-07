@@ -754,7 +754,7 @@
             \rightskip2pt
             \hyphenpenalty=1\relax
             \emergencystretch=2em
-            \noindent\PP@aprovacao #1
+            \noindent\PP@aprovacao #1.
         }\kern15pt\par\nointerlineskip
         \kern7.5ex%\par
         \MakeTextUppercase{\PP@banca}
