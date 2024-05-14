@@ -2,7 +2,8 @@
 % Exemplo do uso da classe tcc.cls. Veja o arquivo .cls
 % para mais detalhes e instruções.
 %----------------------------------------------------------------------------------
-\chapter{\label{chap:chap2}Another chapter}
+\chapter{Another chapter}
+\label{chap:chap2}
 
 lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam
 nonumy eirmod tempor invidunt~\cite{PLASSPAG81} ut labore et
@@ -19,7 +20,7 @@ cronograma ~\cite{WIKIPIC09}.
 % Um exemplo relativamente complicado de tabela.
 \begin{table}[htb]
 \begin{center}
-\caption{\label{tab:tab1}This is a table}%
+\caption{This is a table}%
 %\rowcolors{4}{black!10}{black!15}
 \setlength{\tabcolsep}{.5cm}%
 \resizebox{.7\linewidth}{!}{%
@@ -42,6 +43,7 @@ cronograma ~\cite{WIKIPIC09}.
 11 & $\times$   & $\times$   & $\times$   & $\times$ \tabularnewline
 \end{tabular}}
 \end{center}
+\label{tab:tab1}
 \end{table}
 
 \section{Another section}
@@ -70,7 +72,8 @@ dolor sit amet ~\Cref{fig:fig2}.
 % Mais uma figura
 \begin{figure}[htb]
 \centering\includegraphics[width=.75\textwidth]{figuras/exemplo1.eps}
-\caption{\label{fig:fig2}This is another figure}
+\caption{This is another figure}
+\label{fig:fig2}
 \end{figure}
 
 Duis autem vel eum iriure dolor in hendrerit in vulputate velit
@@ -112,7 +115,7 @@ simples.
 % Um exemplo de tabela mais simples.
 \begin{table}
 \begin{center}%
-\caption{\label{tab:tab2}Note que a legenda da tabela fica na parte de cima}%
+\caption{Note que a legenda da tabela fica na parte de cima}%
 %\setlength{\tabcolsep}{1cm}%
 \begin{tabular*}{.7\linewidth}{@{\extracolsep{\fill}}lll}%
 \noalign{\smallskip}
@@ -128,6 +131,7 @@ sed & diam & voluptua \tabularnewline
 at & vero & eos \tabularnewline
 \end{tabular*}
 \end{center}
+\label{tab:tab2}
 \end{table}
 
 Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam

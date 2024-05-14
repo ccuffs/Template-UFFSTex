@@ -63,10 +63,11 @@ Ver Figura~\ref{fig:fig1}.
 \begin{figure}[htb!]
 \centering\includegraphics[width=.65\textwidth]{figuras/exemplo.eps}
 \caption%[This figure has a shorter caption now]%
-        {\label{fig:fig1}This is a figure with a very long
+        {This is a figure with a very long
     caption which looks ugly in the corresponding list of figures.
     Fortunately, there is an optional parameter for a shorter
     replacement of this monstrosity}%
+    \label{fig:fig1}
 \end{figure}
 
 tempor invidunt~\cite{SKIENAC698} ut labore et dolore magna
@@ -104,9 +105,10 @@ mostra este processo.
     \end{algorithmic}
 \end{center}
 \caption[An algorithm with an optional, shorter caption]%
-    {\label{alg:alg1}This is an algorithm with a very long
+    {This is an algorithm with a very long
     caption. However, we replaced it with a shorter version
     in the Outline for legibility reasons}%
+    \label{alg:alg1}
 \end{algorithm}
 
 tempor invidunt ut labore et dolore magna aliquyam erat sed diam
@@ -126,7 +128,8 @@ aliquyam erat sed diam voluptua at vero~\cite{BRIANPL04}.
    \item consetetur
 \end{enumerate}
 
-\section{\label{sec:secao1}Primeira seção}
+\section{Primeira seção}
+\label{sec:secao1}
 
 lorem ipsum dolor sit $x\leq 2$  amet consetetur sadipscing elitr
 sed diam nonumy eirmod Seção~\ref{sec:secao1} tempor invidunt ut
